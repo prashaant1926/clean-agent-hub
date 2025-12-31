@@ -63,97 +63,103 @@ const IsoTripleCube = ({ color }: { color: string }) => (
   </svg>
 );
 
-const skills = [
+const tasks = [
   {
     Shape: IsoSingleCube,
     color: "#ef4444",
-    title: "pdf",
+    title: "Use DocForge to create PDFs",
     description: "Create, extract, merge PDFs and handle forms.",
   },
   {
     Shape: IsoCubeCluster,
     color: "#f59e0b",
-    title: "pptx",
+    title: "Use SlideKit to build presentations",
     description: "Generate and edit PowerPoint presentations.",
   },
   {
     Shape: IsoDoubleCube,
     color: "#22c55e",
-    title: "xlsx",
+    title: "Use SheetCraft to generate spreadsheets",
     description: "Excel spreadsheets with formulas and data.",
   },
   {
     Shape: IsoTripleCube,
     color: "#3b82f6",
-    title: "frontend-design",
+    title: "Use Pixel to design interfaces",
     description: "Polished web UI and component design.",
   },
   {
     Shape: IsoSingleCube,
     color: "#8b5cf6",
-    title: "algorithmic-art",
+    title: "Use Genesis to create generative art",
     description: "Generative p5.js art and visualizations.",
   },
   {
     Shape: IsoCubeCluster,
     color: "#ec4899",
-    title: "canvas-design",
+    title: "Use Canvas to create visual art",
     description: "Visual art output as .png or .pdf.",
   },
   {
     Shape: IsoDoubleCube,
     color: "#14b8a6",
-    title: "theme-factory",
+    title: "Use Palette to generate themes",
     description: "Generate 10 color and font themes.",
   },
   {
     Shape: IsoTripleCube,
     color: "#6366f1",
-    title: "web-artifacts-builder",
+    title: "Use Forge to build React artifacts",
     description: "Complex React artifacts and components.",
   },
   {
     Shape: IsoSingleCube,
     color: "#f97316",
-    title: "mcp-builder",
+    title: "Use Bridge to build MCP servers",
     description: "MCP server development and tooling.",
   },
   {
     Shape: IsoCubeCluster,
     color: "#06b6d4",
-    title: "slack-gif-creator",
+    title: "Use Motion to create GIFs",
     description: "Create animated GIFs for Slack.",
   },
   {
     Shape: IsoDoubleCube,
     color: "#a855f7",
-    title: "brand-guidelines",
+    title: "Use Brandly to maintain guidelines",
     description: "Maintain brand consistency across assets.",
   },
   {
     Shape: IsoTripleCube,
     color: "#84cc16",
-    title: "internal-comms",
+    title: "Use Memo to draft internal comms",
     description: "Internal messaging templates and docs.",
+  },
+  {
+    Shape: IsoSingleCube,
+    color: "#0ea5e9",
+    title: "Use Tinker to finetune models",
+    description: "Dataset prep, hyperparameters, and training loops.",
   },
 ];
 
 export function SkillsGrid() {
   return (
     <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-      {skills.map((skill) => (
+      {tasks.map((task) => (
         <div
-          key={skill.title}
+          key={task.title}
           className="group cursor-pointer rounded-2xl border border-border bg-card p-5 shadow-sm transition-all hover:shadow-lg"
         >
           <div className="mb-4 flex items-start justify-between">
             <div className="h-10 w-10">
-              <skill.Shape color={skill.color} />
+              <task.Shape color={task.color} />
             </div>
             <ChevronRight className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
           </div>
-          <h3 className="mb-1.5 font-medium text-foreground">{skill.title}</h3>
-          <p className="text-sm leading-relaxed text-muted-foreground">{skill.description}</p>
+          <h3 className="mb-1.5 font-medium text-foreground">{task.title}</h3>
+          <p className="text-sm leading-relaxed text-muted-foreground">{task.description}</p>
         </div>
       ))}
     </div>

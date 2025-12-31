@@ -11,10 +11,10 @@ const Index = () => {
           {/* Hero */}
           <div className="mb-10">
             <h1 className="mb-3 text-3xl font-medium tracking-tight text-foreground">
-              Skills for AI agents
+              Tasks
             </h1>
             <p className="max-w-md text-muted-foreground">
-              Discover and integrate specialized capabilities to power your agent workflows.
+              Run specialized tasks to power your agent workflows.
             </p>
           </div>
 
