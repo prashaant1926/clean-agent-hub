@@ -2,30 +2,25 @@ import { ChevronRight } from "lucide-react";
 
 const IsoCube = ({ color }: { color: string }) => (
   <svg viewBox="0 0 40 40" className="h-full w-full">
-    <polygon points="20,6 34,14 34,28 20,36 6,28 6,14" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1.5" />
-    <polygon points="20,6 34,14 20,22 6,14" fill={color} fillOpacity="0.3" />
-    <line x1="20" y1="22" x2="20" y2="36" stroke={color} strokeWidth="1" opacity="0.5" />
+    <rect x="8" y="8" width="24" height="24" fill={color} fillOpacity="0.2" stroke={color} strokeWidth="1.5" rx="2" />
   </svg>
 );
 
-const IsoHex = ({ color }: { color: string }) => (
+const IsoCircle = ({ color }: { color: string }) => (
   <svg viewBox="0 0 40 40" className="h-full w-full">
-    <polygon points="20,4 36,12 36,28 20,36 4,28 4,12" fill="none" stroke={color} strokeWidth="1.5" />
-    <circle cx="20" cy="20" r="6" fill={color} fillOpacity="0.3" stroke={color} strokeWidth="1" />
+    <circle cx="20" cy="20" r="14" fill={color} fillOpacity="0.2" stroke={color} strokeWidth="1.5" />
   </svg>
 );
 
-const IsoPrism = ({ color }: { color: string }) => (
+const IsoTriangle = ({ color }: { color: string }) => (
   <svg viewBox="0 0 40 40" className="h-full w-full">
-    <polygon points="20,6 36,34 4,34" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1.5" />
-    <line x1="20" y1="6" x2="20" y2="34" stroke={color} strokeWidth="1" opacity="0.4" />
+    <polygon points="20,6 36,34 4,34" fill={color} fillOpacity="0.2" stroke={color} strokeWidth="1.5" />
   </svg>
 );
 
 const IsoDiamond = ({ color }: { color: string }) => (
   <svg viewBox="0 0 40 40" className="h-full w-full">
-    <polygon points="20,4 36,20 20,36 4,20" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1.5" />
-    <polygon points="20,10 30,20 20,30 10,20" fill={color} fillOpacity="0.2" />
+    <polygon points="20,6 34,20 20,34 6,20" fill={color} fillOpacity="0.2" stroke={color} strokeWidth="1.5" />
   </svg>
 );
 
@@ -37,13 +32,13 @@ const skills = [
     description: "Execute Python in a sandbox with data analysis and visualization.",
   },
   {
-    Shape: IsoHex,
+    Shape: IsoCircle,
     color: "#f59e0b",
     title: "Web Search",
     description: "Search the web and retrieve up-to-date information in real-time.",
   },
   {
-    Shape: IsoPrism,
+    Shape: IsoTriangle,
     color: "#ec4899",
     title: "File Analysis",
     description: "Read, parse, and extract insights from documents and spreadsheets.",
@@ -61,7 +56,7 @@ const skills = [
     description: "Persist context across sessions for personalized interactions.",
   },
   {
-    Shape: IsoHex,
+    Shape: IsoCircle,
     color: "#f97316",
     title: "Tool Calling",
     description: "Invoke external APIs and functions based on intent.",
