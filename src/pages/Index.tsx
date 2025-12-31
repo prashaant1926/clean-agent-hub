@@ -23,31 +23,33 @@ const Index = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      <main className="mx-auto max-w-6xl px-6 py-16">
+      <main className="mx-auto max-w-6xl px-6 py-20">
         {/* Hero Section */}
-        <div className="mb-16 text-center">
-          <h1 className="mb-4 text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
-            Skills for your agents
+        <div className="mb-20">
+          <h1 className="mb-6 text-6xl font-black tracking-tight text-foreground sm:text-7xl lg:text-8xl leading-[0.95]">
+            The skill library<br />
+            for AI agents
           </h1>
-          <p className="mx-auto max-w-2xl text-lg text-muted-foreground">
-            Discover and share specialized capabilities that make Claude more powerful.
+          <p className="max-w-xl text-lg text-muted-foreground leading-relaxed">
+            Discover and integrate specialized capabilities to operate, 
+            build, or enhance your AI-powered workflows.
           </p>
         </div>
 
         {/* Search */}
-        <div className="mb-8 flex justify-center">
+        <div className="mb-8">
           <div className="w-full max-w-xl">
             <SearchBar value={search} onChange={setSearch} />
           </div>
         </div>
 
         {/* Filters */}
-        <div className="mb-12 flex justify-center">
+        <div className="mb-12">
           <CategoryFilter selected={category} onSelect={setCategory} />
         </div>
 
         {/* Skills Grid */}
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
           {filteredSkills.map((skill) => (
             <SkillCard key={skill.id} skill={skill} />
           ))}
