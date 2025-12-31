@@ -1,77 +1,68 @@
 import { ChevronRight } from "lucide-react";
 
-const IsoCube = ({ color, shadow }: { color: string; shadow: string }) => (
-  <svg viewBox="0 0 50 50" className="h-full w-full drop-shadow-lg">
-    <polygon points="25,8 42,18 42,34 25,44 8,34 8,18" fill={shadow} />
-    <polygon points="25,8 42,18 25,28 8,18" fill={color} />
-    <polygon points="25,28 42,18 42,34 25,44" fill={shadow} />
-    <polygon points="25,28 8,18 8,34 25,44" fill={shadow} className="opacity-70" />
+const IsoCube = ({ color }: { color: string }) => (
+  <svg viewBox="0 0 40 40" className="h-full w-full">
+    <polygon points="20,6 34,14 34,28 20,36 6,28 6,14" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1.5" />
+    <polygon points="20,6 34,14 20,22 6,14" fill={color} fillOpacity="0.3" />
+    <line x1="20" y1="22" x2="20" y2="36" stroke={color} strokeWidth="1" opacity="0.5" />
   </svg>
 );
 
-const IsoHex = ({ color, shadow }: { color: string; shadow: string }) => (
-  <svg viewBox="0 0 50 50" className="h-full w-full drop-shadow-lg">
-    <polygon points="25,4 44,15 44,37 25,48 6,37 6,15" fill={shadow} />
-    <circle cx="25" cy="26" r="10" fill={color} />
+const IsoHex = ({ color }: { color: string }) => (
+  <svg viewBox="0 0 40 40" className="h-full w-full">
+    <polygon points="20,4 36,12 36,28 20,36 4,28 4,12" fill="none" stroke={color} strokeWidth="1.5" />
+    <circle cx="20" cy="20" r="6" fill={color} fillOpacity="0.3" stroke={color} strokeWidth="1" />
   </svg>
 );
 
-const IsoPrism = ({ color, shadow }: { color: string; shadow: string }) => (
-  <svg viewBox="0 0 50 50" className="h-full w-full drop-shadow-lg">
-    <polygon points="25,6 44,42 6,42" fill={shadow} />
-    <polygon points="25,6 44,42 25,36" fill={color} className="opacity-80" />
-    <polygon points="25,6 6,42 25,36" fill={color} />
+const IsoPrism = ({ color }: { color: string }) => (
+  <svg viewBox="0 0 40 40" className="h-full w-full">
+    <polygon points="20,6 36,34 4,34" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1.5" />
+    <line x1="20" y1="6" x2="20" y2="34" stroke={color} strokeWidth="1" opacity="0.4" />
   </svg>
 );
 
-const IsoDiamond = ({ color, shadow }: { color: string; shadow: string }) => (
-  <svg viewBox="0 0 50 50" className="h-full w-full drop-shadow-lg">
-    <polygon points="25,4 46,25 25,46 4,25" fill={shadow} />
-    <polygon points="25,4 46,25 25,25" fill={color} />
-    <polygon points="25,25 46,25 25,46" fill={shadow} className="opacity-60" />
+const IsoDiamond = ({ color }: { color: string }) => (
+  <svg viewBox="0 0 40 40" className="h-full w-full">
+    <polygon points="20,4 36,20 20,36 4,20" fill={color} fillOpacity="0.15" stroke={color} strokeWidth="1.5" />
+    <polygon points="20,10 30,20 20,30 10,20" fill={color} fillOpacity="0.2" />
   </svg>
 );
 
 const skills = [
   {
     Shape: IsoCube,
-    color: "#34d399",
-    shadow: "#059669",
+    color: "#10b981",
     title: "Code Interpreter",
     description: "Execute Python in a sandbox with data analysis and visualization.",
   },
   {
     Shape: IsoHex,
-    color: "#fbbf24",
-    shadow: "#d97706",
+    color: "#f59e0b",
     title: "Web Search",
     description: "Search the web and retrieve up-to-date information in real-time.",
   },
   {
     Shape: IsoPrism,
-    color: "#f472b6",
-    shadow: "#db2777",
+    color: "#ec4899",
     title: "File Analysis",
     description: "Read, parse, and extract insights from documents and spreadsheets.",
   },
   {
     Shape: IsoDiamond,
-    color: "#60a5fa",
-    shadow: "#2563eb",
+    color: "#3b82f6",
     title: "Image Generation",
     description: "Create and edit images from natural language descriptions.",
   },
   {
     Shape: IsoCube,
-    color: "#a78bfa",
-    shadow: "#7c3aed",
+    color: "#8b5cf6",
     title: "Memory",
     description: "Persist context across sessions for personalized interactions.",
   },
   {
     Shape: IsoHex,
-    color: "#fb923c",
-    shadow: "#ea580c",
+    color: "#f97316",
     title: "Tool Calling",
     description: "Invoke external APIs and functions based on intent.",
   },
@@ -86,8 +77,8 @@ export function SkillsGrid() {
           className="group cursor-pointer rounded-2xl border border-border bg-card p-5 shadow-sm transition-all hover:shadow-lg"
         >
           <div className="mb-4 flex items-start justify-between">
-            <div className="h-11 w-11">
-              <skill.Shape color={skill.color} shadow={skill.shadow} />
+            <div className="h-10 w-10">
+              <skill.Shape color={skill.color} />
             </div>
             <ChevronRight className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
           </div>
