@@ -26,7 +26,7 @@ export function AppSidebar() {
       {/* Logo */}
       <div className="flex items-center gap-2.5 px-5 py-5">
         <IsoLogo />
-        <span className="font-semibold text-foreground">Sundial</span>
+        <span className="font-medium text-foreground">Sundial</span>
       </div>
 
       {/* Main Nav */}
@@ -36,7 +36,7 @@ export function AppSidebar() {
             <li key={item.label}>
               <a
                 href="#"
-                className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium transition-colors ${
+                className={`flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm transition-colors ${
                   item.active
                     ? "bg-muted text-foreground"
                     : "text-muted-foreground hover:bg-muted hover:text-foreground"
@@ -57,7 +57,7 @@ export function AppSidebar() {
             <li key={item.label}>
               <a
                 href="#"
-                className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm font-medium text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+                className="flex items-center gap-3 rounded-lg px-3 py-2.5 text-sm text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
               >
                 <item.icon className="h-4 w-4" />
                 {item.label}
