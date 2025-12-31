@@ -79,26 +79,22 @@ const skills = [
 
 export function SkillsGrid() {
   return (
-    <section className="py-16">
-      <div className="mx-auto max-w-5xl px-6">
-        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-          {skills.map((skill) => (
-            <div
-              key={skill.title}
-              className="group cursor-pointer rounded-2xl border border-border bg-card p-5 shadow-sm transition-all hover:shadow-lg"
-            >
-              <div className="mb-4 flex items-start justify-between">
-                <div className="h-11 w-11">
-                  <skill.Shape color={skill.color} shadow={skill.shadow} />
-                </div>
-                <ChevronRight className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
-              </div>
-              <h3 className="mb-1.5 font-semibold text-foreground">{skill.title}</h3>
-              <p className="text-sm leading-relaxed text-muted-foreground">{skill.description}</p>
+    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+      {skills.map((skill) => (
+        <div
+          key={skill.title}
+          className="group cursor-pointer rounded-2xl border border-border bg-card p-5 shadow-sm transition-all hover:shadow-lg"
+        >
+          <div className="mb-4 flex items-start justify-between">
+            <div className="h-11 w-11">
+              <skill.Shape color={skill.color} shadow={skill.shadow} />
             </div>
-          ))}
+            <ChevronRight className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
+          </div>
+          <h3 className="mb-1.5 font-semibold text-foreground">{skill.title}</h3>
+          <p className="text-sm leading-relaxed text-muted-foreground">{skill.description}</p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
   );
 }
