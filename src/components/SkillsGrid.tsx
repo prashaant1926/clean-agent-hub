@@ -1,62 +1,101 @@
 import { ChevronRight } from "lucide-react";
 
-const IsoCube = ({ color }: { color: string }) => (
-  <svg viewBox="0 0 40 40" className="h-full w-full">
-    <rect x="8" y="8" width="24" height="24" fill={color} fillOpacity="0.2" stroke={color} strokeWidth="1.5" rx="2" />
+const IsoCubeCluster = ({ color }: { color: string }) => (
+  <svg viewBox="0 0 60 60" className="h-full w-full">
+    {/* Center cube */}
+    <polygon points="30,20 42,27 42,41 30,48 18,41 18,27" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="30,20 42,27 30,34 18,27" fill="white" stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="30,34 42,27 42,41 30,48" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="30,34 18,27 18,41 30,48" fill="#1a1a1a" stroke="#1a1a1a" strokeWidth="1" />
+    
+    {/* Top cube */}
+    <polygon points="30,8 42,15 42,29 30,36 18,29 18,15" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="30,8 42,15 30,22 18,15" fill="white" stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="30,22 42,15 42,29 30,36" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="30,22 18,15 18,29 30,36" fill="#1a1a1a" stroke="#1a1a1a" strokeWidth="1" />
   </svg>
 );
 
-const IsoCircle = ({ color }: { color: string }) => (
-  <svg viewBox="0 0 40 40" className="h-full w-full">
-    <circle cx="20" cy="20" r="14" fill={color} fillOpacity="0.2" stroke={color} strokeWidth="1.5" />
+const IsoSingleCube = ({ color }: { color: string }) => (
+  <svg viewBox="0 0 60 60" className="h-full w-full">
+    <polygon points="30,12 48,22 48,42 30,52 12,42 12,22" fill={color} stroke="#1a1a1a" strokeWidth="1.5" />
+    <polygon points="30,12 48,22 30,32 12,22" fill="white" stroke="#1a1a1a" strokeWidth="1.5" />
+    <polygon points="30,32 48,22 48,42 30,52" fill={color} stroke="#1a1a1a" strokeWidth="1.5" />
+    <polygon points="30,32 12,22 12,42 30,52" fill="#1a1a1a" stroke="#1a1a1a" strokeWidth="1.5" />
   </svg>
 );
 
-const IsoTriangle = ({ color }: { color: string }) => (
-  <svg viewBox="0 0 40 40" className="h-full w-full">
-    <polygon points="20,6 36,34 4,34" fill={color} fillOpacity="0.2" stroke={color} strokeWidth="1.5" />
+const IsoDoubleCube = ({ color }: { color: string }) => (
+  <svg viewBox="0 0 60 60" className="h-full w-full">
+    {/* Left cube */}
+    <polygon points="22,18 34,25 34,39 22,46 10,39 10,25" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="22,18 34,25 22,32 10,25" fill="white" stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="22,32 34,25 34,39 22,46" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="22,32 10,25 10,39 22,46" fill="#1a1a1a" stroke="#1a1a1a" strokeWidth="1" />
+    
+    {/* Right cube */}
+    <polygon points="38,18 50,25 50,39 38,46 26,39 26,25" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="38,18 50,25 38,32 26,25" fill="white" stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="38,32 50,25 50,39 38,46" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="38,32 26,25 26,39 38,46" fill="#1a1a1a" stroke="#1a1a1a" strokeWidth="1" />
   </svg>
 );
 
-const IsoDiamond = ({ color }: { color: string }) => (
-  <svg viewBox="0 0 40 40" className="h-full w-full">
-    <polygon points="20,6 34,20 20,34 6,20" fill={color} fillOpacity="0.2" stroke={color} strokeWidth="1.5" />
+const IsoTripleCube = ({ color }: { color: string }) => (
+  <svg viewBox="0 0 60 60" className="h-full w-full">
+    {/* Bottom left */}
+    <polygon points="20,28 32,35 32,49 20,56 8,49 8,35" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="20,28 32,35 20,42 8,35" fill="white" stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="20,42 32,35 32,49 20,56" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="20,42 8,35 8,49 20,56" fill="#1a1a1a" stroke="#1a1a1a" strokeWidth="1" />
+    
+    {/* Bottom right */}
+    <polygon points="40,28 52,35 52,49 40,56 28,49 28,35" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="40,28 52,35 40,42 28,35" fill="white" stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="40,42 52,35 52,49 40,56" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="40,42 28,35 28,49 40,56" fill="#1a1a1a" stroke="#1a1a1a" strokeWidth="1" />
+    
+    {/* Top center */}
+    <polygon points="30,8 42,15 42,29 30,36 18,29 18,15" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="30,8 42,15 30,22 18,15" fill="white" stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="30,22 42,15 42,29 30,36" fill={color} stroke="#1a1a1a" strokeWidth="1" />
+    <polygon points="30,22 18,15 18,29 30,36" fill="#1a1a1a" stroke="#1a1a1a" strokeWidth="1" />
   </svg>
 );
 
 const skills = [
   {
-    Shape: IsoCube,
-    color: "#10b981",
+    Shape: IsoSingleCube,
+    color: "#22c55e",
     title: "Code Interpreter",
     description: "Execute Python in a sandbox with data analysis and visualization.",
   },
   {
-    Shape: IsoCircle,
+    Shape: IsoCubeCluster,
     color: "#f59e0b",
     title: "Web Search",
     description: "Search the web and retrieve up-to-date information in real-time.",
   },
   {
-    Shape: IsoTriangle,
+    Shape: IsoDoubleCube,
     color: "#ec4899",
     title: "File Analysis",
     description: "Read, parse, and extract insights from documents and spreadsheets.",
   },
   {
-    Shape: IsoDiamond,
+    Shape: IsoTripleCube,
     color: "#3b82f6",
     title: "Image Generation",
     description: "Create and edit images from natural language descriptions.",
   },
   {
-    Shape: IsoCube,
+    Shape: IsoCubeCluster,
     color: "#8b5cf6",
     title: "Memory",
     description: "Persist context across sessions for personalized interactions.",
   },
   {
-    Shape: IsoCircle,
+    Shape: IsoSingleCube,
     color: "#f97316",
     title: "Tool Calling",
     description: "Invoke external APIs and functions based on intent.",
