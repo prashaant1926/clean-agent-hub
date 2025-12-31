@@ -66,39 +66,75 @@ const IsoTripleCube = ({ color }: { color: string }) => (
 const skills = [
   {
     Shape: IsoSingleCube,
-    color: "#22c55e",
-    title: "Code Interpreter",
-    description: "Execute Python in a sandbox with data analysis and visualization.",
+    color: "#ef4444",
+    title: "pdf",
+    description: "Create, extract, merge PDFs and handle forms.",
   },
   {
     Shape: IsoCubeCluster,
     color: "#f59e0b",
-    title: "Web Search",
-    description: "Search the web and retrieve up-to-date information in real-time.",
+    title: "pptx",
+    description: "Generate and edit PowerPoint presentations.",
   },
   {
     Shape: IsoDoubleCube,
-    color: "#ec4899",
-    title: "File Analysis",
-    description: "Read, parse, and extract insights from documents and spreadsheets.",
+    color: "#22c55e",
+    title: "xlsx",
+    description: "Excel spreadsheets with formulas and data.",
   },
   {
     Shape: IsoTripleCube,
     color: "#3b82f6",
-    title: "Image Generation",
-    description: "Create and edit images from natural language descriptions.",
+    title: "frontend-design",
+    description: "Polished web UI and component design.",
+  },
+  {
+    Shape: IsoSingleCube,
+    color: "#8b5cf6",
+    title: "algorithmic-art",
+    description: "Generative p5.js art and visualizations.",
   },
   {
     Shape: IsoCubeCluster,
-    color: "#8b5cf6",
-    title: "Memory",
-    description: "Persist context across sessions for personalized interactions.",
+    color: "#ec4899",
+    title: "canvas-design",
+    description: "Visual art output as .png or .pdf.",
+  },
+  {
+    Shape: IsoDoubleCube,
+    color: "#14b8a6",
+    title: "theme-factory",
+    description: "Generate 10 color and font themes.",
+  },
+  {
+    Shape: IsoTripleCube,
+    color: "#6366f1",
+    title: "web-artifacts-builder",
+    description: "Complex React artifacts and components.",
   },
   {
     Shape: IsoSingleCube,
     color: "#f97316",
-    title: "Tool Calling",
-    description: "Invoke external APIs and functions based on intent.",
+    title: "mcp-builder",
+    description: "MCP server development and tooling.",
+  },
+  {
+    Shape: IsoCubeCluster,
+    color: "#06b6d4",
+    title: "slack-gif-creator",
+    description: "Create animated GIFs for Slack.",
+  },
+  {
+    Shape: IsoDoubleCube,
+    color: "#a855f7",
+    title: "brand-guidelines",
+    description: "Maintain brand consistency across assets.",
+  },
+  {
+    Shape: IsoTripleCube,
+    color: "#84cc16",
+    title: "internal-comms",
+    description: "Internal messaging templates and docs.",
   },
 ];
 
@@ -116,7 +152,7 @@ export function SkillsGrid() {
             </div>
             <ChevronRight className="h-4 w-4 text-muted-foreground opacity-0 transition-opacity group-hover:opacity-100" />
           </div>
-          <h3 className="mb-1.5 font-semibold text-foreground">{skill.title}</h3>
+          <h3 className="mb-1.5 font-medium text-foreground">{skill.title}</h3>
           <p className="text-sm leading-relaxed text-muted-foreground">{skill.description}</p>
         </div>
       ))}

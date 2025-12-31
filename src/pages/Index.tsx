@@ -10,7 +10,7 @@ const Index = () => {
         <div className="px-10 py-10">
           {/* Hero */}
           <div className="mb-10">
-            <h1 className="mb-3 text-4xl font-bold tracking-tight text-foreground">
+            <h1 className="mb-3 text-3xl font-medium tracking-tight text-foreground">
               Skills for AI agents
             </h1>
             <p className="max-w-md text-muted-foreground">
