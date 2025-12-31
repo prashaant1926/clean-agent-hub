@@ -48,8 +48,7 @@ All colors MUST be HSL.
     --sidebar-ring: 0 0% 60%;
 
     /* Typography */
-    --font-display: 'Playfair Display', Georgia, serif;
-    --font-body: 'Inter', system-ui, sans-serif;
+    --font-sans: 'Poppins', system-ui, sans-serif;
   }
 
   .dark {
@@ -99,10 +98,6 @@ All colors MUST be HSL.
 
   body {
     @apply bg-background text-foreground antialiased;
-    font-family: var(--font-body);
-  }
-
-  h1, h2, h3, .font-serif {
-    font-family: var(--font-display);
+    font-family: var(--font-sans);
   }
 }
